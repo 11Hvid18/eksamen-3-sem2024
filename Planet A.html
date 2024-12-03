@@ -16,43 +16,14 @@
 
 <body>
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-6">
-            <div class="mb-3">
-                <label for="wallWidth" class="form-label"> Hvor bred er min væg?</label>
-                <input type="number" class="form-control" id="wallWidth" placeholder="Angiv bredde i meter">
-            </div>
 
-            <div class="mb-3">
-                <label for="wallHeight" class="form-label"> Hvor høj er min væg?</label>
-                <input type="number" class="form-control" id="wallHeight" placeholder="Angiv højde i meter">
-            </div>
-
-            <div class="mb-3">
-                <button type="button" class="btn btn-primary" id="calc">Udregn</button>
-            </div>
-
-            <div class="fs-1">
-                <span id="result">0</span> <span>m2</span>
-            </div>
-        </div>
-    </div>
 </div>
 
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 
-    const wallWidth = document.querySelector("#wallWidth");
-    const wallHeight = document.querySelector("#wallHeight");
-    const calc = document.querySelector("#calc");
-    const result = document.querySelector("#result");
 
-    calc.addEventListener("click", () => {
-        const m2 = wallWidth.value * wallHeight.value;
-        result.innerText = m2;
-        console.log(m2);
-    })
 </script>
 </body>
 </html>
