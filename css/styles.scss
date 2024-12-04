@@ -25,3 +25,18 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // 5. Du kan lave styling her...
 
+@media (max-width: 768px) {
+	h1 {
+		font-size: 3rem;
+	}
+
+	.btn-grå {
+		font-size: 1rem;
+		padding: 0.5rem 1rem;
+	}
+}
+
+
+
+
+
