@@ -46,3 +46,8 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 	background-image: url("../image/baggrund.png");
 	background-repeat: repeat;
 }
+
+.card1{
+	width: 600px;
+	height: 550px;
+}
