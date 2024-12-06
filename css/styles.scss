@@ -11,12 +11,12 @@ $link-decoration: none;
 // 4. Include any default map overrides here
 $custom-colors: (
 	"bgfarve":#212121,
-	"grå":#5F5F5F,
+	"graa":#5F5F5F,
 	"orange":#FF8229,
 	"hvid":#F8F8F8,
 	"pink":#FF6DF0,
-	"blå":#5182EB,
-	"grøn":#5BB66C,
+	"blaa":#5182EB,
+	"groen":#5BB66C,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
