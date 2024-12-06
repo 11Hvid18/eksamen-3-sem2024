@@ -46,3 +46,12 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 	background-image: url("../image/baggrund.png");
 	background-repeat: repeat;
 }
+
+.navbar{
+	outline: 2px solid #F8F8F8;
+}
+
+.card1{
+	width: 500px;
+	height: 550px;
+}
