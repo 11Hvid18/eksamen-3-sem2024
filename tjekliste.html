@@ -65,36 +65,82 @@
     <div class="planet d-flex align-items-center row row-cols-4">
         <img src="image/Planet10002.webp" alt="planet" class="img-fluid justify-content-md-start d-flex">
 
+<form>
     <ol class="list-group list-group-numbered row row-cols-8">
         <li class="list-group-item d-flex align-items-start bg-graa">
-            <div class="ms-2 me-auto">
-                <div class="fw-bold text-hvid">Købte ind med mit eget net</div>
-                Content for list item
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="net" id="flexChecknet">
+                <label class="form-check-label text-hvid" for="flexChecknet">
+                    Købte ind med net
+                </label>
             </div>
             <span class="badge text-bg-hvid rounded-pill">14</span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-start bg-graa">
-            <div class="ms-2 me-auto">
-                <div class="fw-bold text-hvid">Brugte egen drikkedunk</div>
-                Content for list item
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="drikkedunk" id="flexCheckdrikkedunk" checked>
+                <label class="form-check-label text-hvid" for="flexCheckdrikkedunk">
+                    Brugte egen drikkedunk
+                </label>
             </div>
             <span class="badge text-bg-hvid rounded-pill">14</span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-start bg-graa">
-            <div class="ms-2 me-auto">
-                <div class="fw-bold text-hvid">Jeg gik/cyklede i dag</div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="gik" id="flexCheckgik" checked>
+                <label class="form-check-label text-hvid" for="flexCheckgik">
+                    Jeg gik/cyklede i dag
+                </label>
             </div>
             <span class="badge text-bg-hvid rounded-pill">14</span>
         </li>
+
+        <li class="list-group-item d-flex justify-content-between align-items-start bg-graa">
+
+            <button type="submit">Færdig</button>
+        </li>
+
     </ol>
-</div>
-</div>
+</form>
 
 
+</div>
+
+</div>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+    const form = document.querySelector('form');
+    console.log("Form fundet:", form);
 
+    const checkboxes = document.querySelectorAll('[type="checkbox"]');
+
+    checkboxes.forEach(checkbox => {
+        const label = document.querySelector(`label[for="${checkbox.id}"]`); // Find label via `for` attribut
+        console.log(`Checkbox id: ${checkbox.id}, value: ${checkbox.value}, label text: ${label.innerText}`);
+    });
+
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const selectedSkills = [];
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                const label = document.querySelector(`label[for="${checkbox.id}"]`);
+                selectedSkills.push({
+                    value: checkbox.value,
+                    label: label.innerText
+                });
+            }
+        });
+        console.log("Valgte checkboxes:", selectedSkills);
+    });
+
+
+    form.addEventListener('reset', () => {
+        console.log("Formen er blevet nulstillet, genopret status for checkboxes");
+        checkboxes.forEach(checkbox => checkbox.checked = true);
+    });
 </script>
 </body>
 </html>
