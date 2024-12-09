@@ -47,11 +47,9 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 	background-repeat: repeat;
 }
 
-.card1{
-	width: 600px;
-	height: 550px;
+.tekst {
+	font-family: "darkmode-on", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
-.nav{
-	border: white;
-}
