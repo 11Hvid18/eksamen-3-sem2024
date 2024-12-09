@@ -1,89 +1,126 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <title>Underside</title>
-
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
-
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://use.typekit.net/fzx5twy.css">
+    <!-- Tilføj stil for at gemme knappen under 500px -->
+    <style>
+        /* Styling for skjulning på mindre skærme */
+        @media (max-width: 500px) {
+            #planet-btn {
+                display: none;
+            }
+        }
+
+        /* Centraliser knappen i navbaren indtil 500px */
+        .navbar .btn-outline-grå {
+            margin: 0 auto;
+        }
+
+        @media (max-width: 500px) {
+            /* Midlertidig skjul det på navbaren og flyt til offcanvas-menu */
+            .offcanvas-body .planet-menu-btn {
+                display: block !important;
+            }
+        }
+    </style>
 </head>
+
 <body class="bg-bgfarve baggrund">
 <div class="container">
     <nav class="navbar navbar-dark bg-bgfarve fixed-top border-white">
         <div class="container-fluid">
             <a href="#">
-                <img src="image/Logo.webp" alt="logo">
+                <img src="image/logo%20h.webp" alt="logo">
             </a>
-            <button type="button" class="btn btn-outline-grå text-hvid btn-lg">Hjælp din planet</button>
-            <li class="nav-item">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Min profil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Find venner</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
+            <!-- Synlig knap indtil 500px i midten af navbar -->
+            <button type="button" id="planet-btn" class="btn btn-outline-grå text-hvid btn-lg">Hjælp din planet</button>
 
+            <li class="nav-item">
+                <!-- Offcanvas menu til dropdown -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                     aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Min profil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Find venner</a>
+                            </li>
+                            <!-- Hjælp din planet knap flyttes dynamisk til dropdown her -->
+                            <li class="nav-item">
+                                <button class="btn btn-outline-grå text-hvid planet-menu-btn" style="display: none;">Hjælp din planet</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
         </div>
     </nav>
-    <br> <br> <br>  <br>  <br>
-    <div>
-        <h1 class="text-orange justify-content-center d-flex">1000</h1>
-        <h3 class="text-hvid justify-content-center d-flex">Point</h3>
-    </div>
-    <div class="planet justify-content-center d-flex align-items-center">
-    <img src="image/Planet1000.webp" alt="planet" class="img-fluid">
-    </div>
-    <br>
-    <div>
+</div>
+
+<br><br><br>
+<div>
+    <h1 class="text-orange justify-content-center d-flex">1000</h1>
+    <h3 class="text-hvid justify-content-center d-flex">Point</h3>
+</div>
+<div class="planet justify-content-center d-flex align-items-center">
+    <img src="image/Planet1000%20copy.webp" alt="planet" class="img-fluid">
+</div>
+<br>
+<div>
     <div class="d-grid gap-2 col-lg-4 col-md-4 mx-auto">
-        <button class="btn btn-grøn text-hvid btn-lg" type="button" ><h2>Dagens klimamissioner</h2></button>
-    </div>
+        <button class="btn btn-grøn text-hvid btn-lg" type="button">
+            Dagens klimamissioner
+        </button>
     </div>
 </div>
 
-
+<!-- Scripts -->
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const planetButton = document.getElementById('planet-btn'); // Knappen i navbaren
+        const offcanvasMenuButton = document.querySelector('.planet-menu-btn'); // Knappen i offcanvas-menuet
+        const offcanvasMenu = document.getElementById("offcanvasDarkNavbar");
 
+        const handleScreenSizeChange = () => {
+            if (window.innerWidth <= 500) {
+                // Skift knappen fra navbar til offcanvas
+                if (planetButton && offcanvasMenuButton) {
+                    planetButton.style.display = "none";
+                    offcanvasMenuButton.style.display = "block";
+                }
+            } else {
+                // Flyt knap tilbage til navbar
+                planetButton.style.display = "block";
+                offcanvasMenuButton.style.display = "none";
+            }
+        };
 
+        // Håndter skærmstørrelse ved indlæsning og resize
+        handleScreenSizeChange();
+        window.addEventListener("resize", handleScreenSizeChange);
+    });
 </script>
-
 </body>
+
 </html>
+
