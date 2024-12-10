@@ -53,6 +53,10 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 	font-style: normal;
 }
 
-.btnhjælp {
+.nav{
+	border-bottom: solid white 2px;
+}
 
+.arrow{
+	color: white;
 }
