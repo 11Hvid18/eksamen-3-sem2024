@@ -10,28 +10,8 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Tilføj stil for at gemme knappen under 500px -->
-    <style>
-        /* Styling for skjulning på mindre skærme */
-        @media (max-width: 500px) {
-            #planet-btn {
-                display: none;
-            }
-        }
 
-        /* Centraliser knappen i navbaren indtil 500px */
-        .navbar .btn-outline-grå {
-            margin: 0;
-            padding: 0;
-        }
 
-        @media (max-width: 500px) {
-            /* Midlertidig skjul det på navbaren og flyt til offcanvas-menu */
-            .offcanvas-body .planet-menu-btn {
-                display: block !important;
-            }
-        }
-    </style>
 </head>
 
 <body class="bg-bgfarve baggrund">
@@ -85,7 +65,9 @@
     <h3 class="text-hvid justify-content-center d-flex">Point</h3>
 </div>
 <div class="planet justify-content-center d-flex align-items-center">
-    <img src="image/Planet1000%20copy.webp" alt="planet" class="img-fluid">
+    <div class="planet">
+        <img src="image/Planet1000%20copy.webp" alt="Billede af en planet" class="img-fluid">
+    </div>
 </div>
 <br>
 <div>

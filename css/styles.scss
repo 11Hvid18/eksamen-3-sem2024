@@ -56,3 +56,32 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 .btnhjælp {
 
 }
+
+// Variabler
+$small-screen: 500px;
+
+// Styling for navbar-knappen
+#planet-btn {
+	@media (max-width: $small-screen) {
+		display: none;
+	}
+}
+
+// Styling for offcanvas-knappen
+.offcanvas-body {
+	.planet-menu-btn {
+		display: none;
+
+		@media (max-width: $small-screen) {
+			display: block !important;
+		}
+	}
+}
+
+// Styling for knapper i navbar
+.navbar {
+	.btn-outline-grå {
+		margin: 0;
+		padding: 0;
+	}
+}
