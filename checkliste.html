@@ -66,13 +66,13 @@
         <div class="row align-items-start">
             <!-- Venstre sektion -->
             <div class="col-md-6 d-flex justify-content-center">
-                <div class="planet">
+                <div class="planet" style="margin-top:70px;">
                     <img src="image/kigned.webp" alt="Billede af en planet" class="img-fluid">
                 </div>
             </div>
 
             <!-- Højre sektion -->
-            <div class="col-md-6">
+            <div class="col-md-6" style="margin-top:70px;">
                 <!-- Overskrift kort -->
                 <div class="card mb-3 justify-content-center" style="border: none;">
                     <div class="card-body bg-graa">
@@ -85,7 +85,7 @@
                     <div class="card-body bg-graa">
                         <!-- Klimamissioner -->
                         <ul class="list-group">
-                            <li class="list-group-item d-flex align-items-start bg-hvid rounded-5" style="padding: 20px;">
+                            <li class="list-group-item d-flex align-items-start bg-hvid rounded-5"  style="padding: 20px;">
                                 <input class="form-check-input me-1 bg-graa" type="checkbox" value="" id="firstCheckbox">
                                 <div class="ms-2 me-auto">
                                     <div class="fw-bold text-graa">Købte ind med mit eget net</div>
@@ -122,7 +122,36 @@
                             </li>
                         </ul>
                         <!-- Færdig-knap -->
-                        <button type="button" class="btn btn-blaa w-25 text-hvid mt-3">Færdig</button>
+                        <div class="m-3" >
+                            <button type="button" class="btn btn-blaa" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Færdig
+                            </button>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content bg-graa">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5 text-hvid" id="exampleModalLabel">Købte ind med eget net</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-hvid">
+                                            <p>Du kan reducere plastik brug, ved at tage en pose med til at handle ind,
+                                                eller tag din egen drikkedunk med dig, for at undgå enegangs plastik.</p>
+                                        </div>
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5 text-hvid" id="exampleModalLabel">Jeg gik/cyklede i dag </h1>
+                                        </div>
+                                        <div class="modal-body text-hvid">
+                                            <p>Hvis det er muligt, bør du overveje at cykle eller gå. Sådan sparer du brændstof og penge,
+                                                forbedrer dit helbred og gør miljøet en tjeneste</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                                            <a type="button" class="btn btn-blaa" href="underside.html">Fortsæt</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
