@@ -19,11 +19,11 @@
     <!-- Navbar -->
     <nav class="navbar navbar-dark bg-bgfarve fixed-top" style="border-bottom: 2px solid white;">
         <div class="container-fluid">
-            <!-- Logo -->
-            <img src="image/Logo.webp" alt="Virksomhedens logo">
-
-            <!-- Hjælp knap -->
-            <button type="button" class="btn btn-outline-graa text-hvid btn-lg">Hjælp din planet</button>
+            <a href="#">
+                <img src="image/logolille.webp" alt="logo">
+            </a>
+            <!-- Synlig knap indtil 500px i midten af navbar -->
+            <button type="button" id="planet-btn" class="btn btn-outline-graa text-hvid btn-lg">Hjælp din planet</button>
 
             <!-- Navbar-toggler -->
             <li class="nav-item">
@@ -33,39 +33,26 @@
                 </button>
             </li>
 
-            <!-- Offcanvas-menu -->
             <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
                  aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Min profil</a>
+                            <a class="nav-link active fs-4" aria-current="page" href="#">Min profil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Find venner</a>
+                            <a class="nav-link fs-4" href="#">Find venner</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+                        <!-- Hjælp din planet knap flyttes dynamisk til dropdown her -->
+                        <li class="nav-item">
+                            <button class="btn btn-outline-grå text-hvid planet-menu-btn fs-4" style="display: none;">Hjælp din planet</button>
                         </li>
                     </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -148,6 +135,30 @@
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const planetButton = document.getElementById('planet-btn'); // Knappen i navbaren
+        const offcanvasMenuButton = document.querySelector('.planet-menu-btn'); // Knappen i offcanvas-menuet
+        const offcanvasMenu = document.getElementById("offcanvasDarkNavbar");
+
+        const handleScreenSizeChange = () => {
+            if (window.innerWidth <= 500) {
+                // Skift knappen fra navbar til offcanvas
+                if (planetButton && offcanvasMenuButton) {
+                    planetButton.style.display = "none";
+                    offcanvasMenuButton.style.display = "block";
+                }
+            } else {
+                // Flyt knap tilbage til navbar
+                planetButton.style.display = "block";
+                offcanvasMenuButton.style.display = "none";
+            }
+        };
+
+        // Håndter skærmstørrelse ved indlæsning og resize
+        handleScreenSizeChange();
+        window.addEventListener("resize", handleScreenSizeChange);
+    });
 
 </script>
 </body>
