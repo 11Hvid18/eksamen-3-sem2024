@@ -58,7 +58,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 // Variabler
-$small-screen: 500px;
+$small-screen: 700px;
 
 // Styling for navbar-knappen
 #planet-btn {
@@ -85,8 +85,28 @@ $small-screen: 500px;
 		padding: 0;
 	}
 }
+
+img{
+	max-width: 100% !important;
+}
+
 #myVideo {
 	width: 35%;
 	height: 35%;
 	border-radius: 50%;
 }
+.Se{
+	text-decoration-line: underline;
+
+}
+
+.data{
+	text-decoration-line: underline;
+
+}
+
+.Kontakt{
+	text-decoration-line: underline;
+
+}
+
