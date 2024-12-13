@@ -26,9 +26,33 @@
                 <img src="image/logolille.webp" alt="logo">
             </a>
 
-            <button type="button" id="planet-btn" class="btn btn-outline-graa text-hvid btn-lg"><a href="Infografik.html" class="text-hvid">Den grønne vej</a></button>
+
+
+            <div class="m-3" >
+                <button type="button" class="btn btn btn-outline-graa text-hvid btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    En bedre vej
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content bg-graa">
+                            <div class="modal-body">
+                                <img src="image/GoNogo350.webp">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuller</button>
+                                <a class="btn btn-blaa" href="underside.html">Fortsæt</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
 
             <button type="button" id="planet-btn" class="btn btn-outline-graa text-hvid btn-lg">Hjælp din planet</button>
+
+
 
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -91,6 +115,16 @@
 <!-- Scripts -->
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+    // Initialize the modal with backdrop: false
+    const myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+        backdrop: false
+    });
+
+    // Later, trigger the modal to open when needed
+    document.getElementById('openModalButton').addEventListener('click', () => {
+        myModal.show();
+    });
+
     document.addEventListener("DOMContentLoaded", function () {
         const planetButton = document.getElementById('planet-btn'); // Knappen i navbaren
         const offcanvasMenuButton = document.querySelector('.planet-menu-btn'); // Knappen i offcanvas-menuet
