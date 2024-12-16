@@ -60,8 +60,8 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 .bordered-image {
-	border: 1px solid #F8F8F8; /* Sort ramme */
-	border-radius: 5%; /* Runde hjørner */
+	border: 1px solid #F8F8F8;
+	border-radius: 5%;
 }
 
 
@@ -96,17 +96,17 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 }
 
 
-// Variabler
+
 $small-screen: 700px;
 
-// Styling for navbar-knappen
+
 #planet-btn {
 	@media (max-width: $small-screen) {
 		display: none;
 	}
 }
 
-// Styling for offcanvas-knappen
+
 .offcanvas-body {
 	.planet-menu-btn {
 		display: none;
@@ -117,7 +117,7 @@ $small-screen: 700px;
 	}
 }
 
-// Styling for knapper i navbar
+
 .navbar {
 	.btn-outline-graa {
 		margin: 0;
