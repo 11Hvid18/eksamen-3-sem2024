@@ -59,6 +59,11 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 	font-style: normal;
 }
 
+.bordered-image {
+	border: 1px solid #F8F8F8; /* Sort ramme */
+	border-radius: 5%; /* Runde hjørner */
+}
+
 
 .button-container {
 	display: flex;
