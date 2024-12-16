@@ -24,7 +24,24 @@
                 <img src="image/logolille.webp" alt="logo">
             </a>
 
-            <button type="button" id="planet-btn" class="btn btn-outline-graa text-hvid btn-lg"><a href="Infografik.html" class="text-hvid">Den grønne vej</a></button>
+
+            <div class="m-3" >
+                <button type="button" class="btn btn btn-outline-graa text-hvid btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    En bedre vej
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content bg-graa">
+                            <div class="modal-body d-flex justify-content-center">
+                                <img src="image/GoNogo350.webp">
+                            </div>
+                            <div class="modal-footer">
+                                <a class="btn btn-groen" href="checkliste.html">Fortsæt</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <button type="button" id="planet-btn" class="btn btn-outline-graa text-hvid btn-lg">Hjælp din planet</button>
 
@@ -172,6 +189,18 @@
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+
+    // Initialize the modal with backdrop: false
+    const myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+        backdrop: false
+    });
+
+    // Later, trigger the modal to open when needed
+    document.getElementById('openModalButton').addEventListener('click', () => {
+        myModal.show();
+    });
+
+
 
     document.addEventListener("DOMContentLoaded", function () {
         const planetButton = document.getElementById('planet-btn'); // Knappen i navbaren
