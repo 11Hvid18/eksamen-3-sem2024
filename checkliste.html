@@ -216,25 +216,25 @@
 
 
     document.addEventListener("DOMContentLoaded", function () {
-        const planetButton = document.getElementById('planet-btn'); // Knappen i navbaren
-        const offcanvasMenuButton = document.querySelector('.planet-menu-btn'); // Knappen i offcanvas-menuet
+        const planetButton = document.getElementById('planet-btn');
+        const offcanvasMenuButton = document.querySelector('.planet-menu-btn');
         const offcanvasMenu = document.getElementById("offcanvasDarkNavbar");
 
         const handleScreenSizeChange = () => {
             if (window.innerWidth <= 500) {
-                // Skift knappen fra navbar til offcanvas
+
                 if (planetButton && offcanvasMenuButton) {
                     planetButton.style.display = "none";
                     offcanvasMenuButton.style.display = "block";
                 }
             } else {
-                // Flyt knap tilbage til navbar
+
                 planetButton.style.display = "block";
                 offcanvasMenuButton.style.display = "none";
             }
         };
 
-        // Håndter skærmstørrelse ved indlæsning og resize
+
         handleScreenSizeChange();
         window.addEventListener("resize", handleScreenSizeChange);
     });
